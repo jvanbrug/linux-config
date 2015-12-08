@@ -40,3 +40,6 @@ alias gshl='git stash list'
 alias gshp='git stash -p'
 
 source ~/linux-config/libs/bash-git-prompt/gitprompt.sh
+Time12ampm="\$(date +%I:%M)"
+GIT_PROMPT_END_USER=" \n${BoldBlue}${Time12ampm}${ResetColor} $ "
+GIT_PROMPT_END_ROOT=" \n${BoldBlue}${Time12ampm}${ResetColor} # "
