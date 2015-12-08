@@ -1,9 +1,11 @@
 # Linux Config
 
+Every code block can be copy-pasted into the terminal and run immediately.
+
 Clone this repo into `~/linux-config`:
 
 ```
-cd ~
+cd ~ && \
 git clone https://github.com/jvanbrug/linux-config
 ```
 
@@ -14,8 +16,8 @@ git clone https://github.com/jvanbrug/linux-config
 Source `.bash_profile` in `/etc/bash.bashrc`:
 
 ```
-cd /etc
-sudo chown <your-username> bash.bashrc
+cd /etc && \
+sudo chown <your-username> bash.bashrc && \
 echo "source ~/linux-config/.bash_profile" >> bash.bashrc
 ```
 
@@ -24,7 +26,7 @@ echo "source ~/linux-config/.bash_profile" >> bash.bashrc
 Source `.gitconfig` in `~/.gitconfig`:
 
 ```
-cd ~
+cd ~ && \
 echo -e "[include]\n\tpath = ~/linux-config/.gitconfig" >> .gitconfig
 ```
 
@@ -33,9 +35,9 @@ echo -e "[include]\n\tpath = ~/linux-config/.gitconfig" >> .gitconfig
 Create `/etc/vim/vimrc.local` and source `.vimrc`:
 
 ```
-cd /etc/vim
-sudo touch vimrc.local
-sudo chown <your-username> vimrc.local
+cd /etc/vim && \
+sudo touch vimrc.local && \
+sudo chown <your-username> vimrc.local && \
 echo "source ~/linux-config/.vimrc" >> vimrc.local
 ```
 
@@ -44,7 +46,7 @@ echo "source ~/linux-config/.vimrc" >> vimrc.local
 Make a `libs/` directory:
 
 ```
-cd ~/linux-config
+cd ~/linux-config && \
 mkdir libs
 ```
 
@@ -53,7 +55,7 @@ mkdir libs
 Clone `bash-git-prompt` into `libs/`:
 
 ```
-cd ~/linux-config/libs
+cd ~/linux-config/libs && \
 git clone https://github.com/magicmonty/bash-git-prompt.git
 ```
 
@@ -72,6 +74,6 @@ in addition to the current directory, without the computer name or user name.
 Install Pathogen:
 
 ```
-mkdir -p ~/.vim/autoload ~/.vim/bundle
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
