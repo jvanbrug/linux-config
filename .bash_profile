@@ -38,3 +38,5 @@ alias gsh='git stash'
 alias gsha='git stash apply'
 alias gshl='git stash list'
 alias gshp='git stash -p'
+
+source ~/linux-config/libs/bash-git-prompt/gitprompt.sh
