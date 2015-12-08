@@ -1,0 +1,6 @@
+build-essential
+clang
+curl
+git
+libssl-dev
+openssl

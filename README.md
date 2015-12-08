@@ -2,6 +2,22 @@
 
 Every code block can be copy-pasted into the terminal and run immediately.
 
+## Add Git APT Repository
+
+```
+sudo add-apt-repository ppa:git-core/ppa
+```
+
+## Install Linux Packages
+
+Update local APT packages and install packages from the `requirements.apt` file:
+```
+sudo apt-get update && \
+sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
+```
+
+## Clone Linux Config repo
+
 Clone this repo into `~/linux-config`:
 
 ```
@@ -77,3 +93,4 @@ Install Pathogen:
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
+
