@@ -94,3 +94,26 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
+## Install Python 3.5.1
+
+```
+cd ~
+wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
+tar xfz Python-3.5.1.tgz
+rm Python-3.5.1.tgz
+cd Python-3.5.1
+./configure
+make
+sudo make install
+```
+Note that the last three commands may take a while. 
+
+Check that the installation was successful:
+```
+$ which python3 
+/usr/local/bin/python3
+
+$ python3 --version
+Python 3.5.1
+```
+
