@@ -144,4 +144,13 @@ cd /opt/local/pycharm*/bin
 
 Follow the setup wizard and be sure to say "yes" when it asks about creating a launcher script. 
 
+## (Optional) Install Sublime Text 3
+
+If you would like a lightweight text editor, Sublime Text is a nice option. You can install it by running the following command:
+```
+sudo apt-get install sublime-text
+```
+
+If you would like to enable Vim support, see this [link](https://www.sublimetext.com/docs/3/vintage.html). You will also find instructions for keymapping on that page. 
+
 
