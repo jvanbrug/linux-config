@@ -68,7 +68,7 @@ sudo chown <your-username> vimrc.local && \
 echo "source ~/linux-config/.vimrc" >> vimrc.local
 ```
 
-## Additional Configuration
+## Optional Configuration
 
 ### (Optional) Git Credential Caching
 
@@ -90,6 +90,14 @@ To unset your credential helper, use this:
 
 ```
 git config --unset credential.helper
+```
+
+## (Optional) Set Vim as editor for Git commits
+
+If you would like to use Vim as your editor for Git commits, use the following command:
+
+```
+git config --global core.editor "vim"
 ```
 
 ## Install third-party Bash/Git/Vim libraries
