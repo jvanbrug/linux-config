@@ -16,6 +16,17 @@ sudo apt-get update && \
 sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
 ```
 
+## Create Installation Directory for local programs
+
+When installing third party programs that are not available through the package manager, you'll need a local directory in which to install them. 
+
+```
+sudo mkdir /opt/local
+sudo chown <your username>/ /opt/local
+```
+
+Now when installing programs, you will extract them to `opt/local`.
+
 ## Clone Linux Config repo
 
 Clone this repo into `~/linux-config`:
@@ -116,4 +127,6 @@ $ which python3
 $ python3 --version
 Python 3.5.1
 ```
+
+
 
