@@ -128,5 +128,20 @@ $ python3 --version
 Python 3.5.1
 ```
 
+## Install PyCharm
+
+PyCharm is a Python IDE that we use for our development. To install PyCharm:
+1. Navigate to the download page [here](https://www.jetbrains.com/pycharm/download/#tabs_1=linux). Be sure to choose the appropriate operating system. 
+2. If you have a Profesional license, download the Professional version, otherwise, download the Community Edition.
+3. In a terminal, navigate to the directory containing the downloaded file. Run the following commands to install and run PyCharm:
+```
+tar xfz pycharm*.tar.gz
+rm pycharm*.tar.gz
+mv pycharm* /opt/local/
+cd /opt/local/pycharm*/bin
+./pycharm.sh
+```
+
+Follow the setup wizard and be sure to say "yes" when it asks about creating a launcher script. 
 
 
