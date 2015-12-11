@@ -11,6 +11,7 @@ sudo add-apt-repository ppa:git-core/ppa
 ## Install Linux Packages
 
 Update local APT packages and install packages from the `requirements.apt` file:
+
 ```
 sudo apt-get update && \
 sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
@@ -22,7 +23,7 @@ When installing third party programs that are not available through the package 
 
 ```
 sudo mkdir /opt/local
-sudo chown <your username>/ /opt/local
+sudo chown <your username> /opt/local
 ```
 
 Now when installing programs, you will extract them to `opt/local`.
@@ -149,9 +150,11 @@ cd Python-3.5.1
 make
 sudo make install
 ```
+
 Note that the last three commands may take a while. 
 
 Check that the installation was successful:
+
 ```
 $ which python3 
 /usr/local/bin/python3
@@ -166,6 +169,7 @@ PyCharm is a Python IDE that we use for our development. To install PyCharm:
 1. Navigate to the download page [here](https://www.jetbrains.com/pycharm/download/#tabs_1=linux). Be sure to choose the appropriate operating system. 
 2. If you have a Profesional license, download the Professional version, otherwise, download the Community Edition.
 3. In a terminal, navigate to the directory containing the downloaded file. Run the following commands to install and run PyCharm:
+
 ```
 tar xfz pycharm*.tar.gz
 rm pycharm*.tar.gz
@@ -179,6 +183,7 @@ Follow the setup wizard and be sure to say "yes" when it asks about creating a l
 ## (Optional) Install Sublime Text 3
 
 If you would like a lightweight text editor, Sublime Text is a nice option. You can install it by running the following command:
+
 ```
 sudo apt-get install sublime-text
 ```
