@@ -68,6 +68,30 @@ sudo chown <your-username> vimrc.local && \
 echo "source ~/linux-config/.vimrc" >> vimrc.local
 ```
 
+## Additional Configuration
+
+### (Optional) Git Credential Caching
+
+If you would like your Git credentials to be saved so you don't have to user your username and password every time you interact with remotes, use the following command:
+
+```
+git config --global credential.helper "cache --timeout=604800"
+```
+
+The timeout value is expressed in seconds, so the above command will cache your credentials for one week at a time. 
+
+If you don't mind your login credentials store in human-readable text in a local file (`.git-credentials`), you can use this command instead:
+
+```
+git config credential.helper store
+```
+
+To unset your credential helper, use this:
+
+```
+git config --unset credential.helper
+```
+
 ## Install third-party Bash/Git/Vim libraries
 
 Make a `libs/` directory:
