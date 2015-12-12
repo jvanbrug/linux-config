@@ -150,6 +150,12 @@ $ python3 --version
 Python 3.5.1
 ```
 
+Install python package requirements:
+
+```
+sudo pip3 install -r ~/linux-config/requirements.txt
+```
+
 (END CONTENTS OF INSTALL SCRIPT)
 
 ---

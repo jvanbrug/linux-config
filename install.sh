@@ -65,4 +65,5 @@ cd Python-3.5.1
 ./configure
 make
 sudo make install
+sudo pip3 install -r ~/linux-config/requirements.txt
 
