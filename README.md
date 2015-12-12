@@ -14,7 +14,7 @@ git clone https://github.com/jvanbrug/linux-config
 ## Installation Notes
 
 If you are running Linux and would like the installation process to be performed automatically, you can run `install.sh` located at the root of the `linux-config` repository:
-
+update
 ```
 cd ~ && \
 chmod 755 install.sh && \
@@ -41,6 +41,7 @@ Update local APT packages and install packages from the `requirements.apt` file:
 
 ```
 sudo apt-get update && \
+sudo apt-get upgrade -y && \
 sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
 ```
 

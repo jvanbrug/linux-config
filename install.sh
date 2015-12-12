@@ -9,6 +9,7 @@ sudo add-apt-repository ppa:git-core/ppa
 # Install Linux Packages
 # Update local APT packages and install packages from the `requirements.apt` file:
 sudo apt-get update 
+sudo apt-get upgrade -y
 sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
 
 # Create Installation Directory for local programs
