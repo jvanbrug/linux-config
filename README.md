@@ -214,6 +214,20 @@ cd /opt/local/pycharm*/bin && \
 
 Follow the setup wizard and be sure to say "yes" when it asks about creating a launcher script. 
 
+### (Optional) Install Heroku
+
+If you aren't a project owner, you won't need to deploy directly to Heroku. For project owners, install heroku using this command:
+
+```
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+```
+
+Login to Heroku using Quantum Media Tech credentials:
+
+```
+heroku login
+```
+
 ### (Optional) Install Sublime Text 3
 
 If you would like a lightweight text editor, Sublime Text is a nice option. You can install it by running the following command:
