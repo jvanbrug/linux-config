@@ -1,6 +1,6 @@
 # Linux Config
 
-Every code block can be copy-pasted into the terminal and run immediately.
+Most code blocks in this document can be copy-pasted into the terminal and run immediately. There are a few that require user input such as `<your username>`. 
 
 ## Add Git APT Repository
 
