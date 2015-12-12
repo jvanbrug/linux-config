@@ -11,3 +11,4 @@ libfreetype6-dev
 libpq-dev
 libssl-dev
 openssl
+vim-gtk
