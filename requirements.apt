@@ -8,5 +8,6 @@ libjpeg8
 legjpeg62-dev
 libfreetype6
 libfreetype6-dev
+libpq-dev
 libssl-dev
 openssl

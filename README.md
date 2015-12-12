@@ -162,6 +162,41 @@ sudo pip3 install -r ~/linux-config/requirements.txt
 
 ## Program Installation
 
+### Install PostgreSQL
+
+PostreSQL is used as the database system for our Django apps. To Install PostgreSQL, run the following commands:
+
+```
+sudo touch /etc/apt/sources.list.d/pgdg.list && \
+sudo echo "deb http://apt.postgresqp.org/pub/repos/apt/ trustry-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && \
+sudo apt-get update && \
+sudo apt-get upgrade -y && \
+sudo apt-get install -y postgresql-9.4 pgadmin3
+```
+
+PgAdmin3 is a graphical interface for interacting with Postgres databases. 
+
+Access the Postgres user through root (type these commands manually):
+
+```
+## switch user to root:
+su -
+## switch user to postgres:
+su - postgres
+## Enter the psql command line utility
+psql
+```
+
+Now at the psql prompt create a user for yourself and django:
+
+```
+postgres=# CREATE USER <your username> WITH SUPERUSER CREATEDB CREATEROLE PASSWORD '<your password>';
+postgres=# CREATE USER django WITH PASSWORD 'blank';
+```
+
+Note that the single quotes and semicolon are both necessary. 
+
 ### Install PyCharm
 
 PyCharm is a Python IDE that we use for our development. To install PyCharm:
