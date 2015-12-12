@@ -2,6 +2,33 @@
 
 Most code blocks in this document can be copy-pasted into the terminal and run immediately. There are a few that require user input such as `<your username>`. 
 
+## Clone Linux Config repo
+
+Clone this repo into `~/linux-config`:
+
+```
+cd ~ && \
+git clone https://github.com/jvanbrug/linux-config
+```
+
+## Installation Notes
+
+If you are running Linux and would like the installation process to be performed automatically, you can run `install.sh` located at the root of the `linux-config` repository:
+
+```
+cd ~ && \
+chmod 755 install.sh && \
+./install.sh
+```
+
+Enter your Linux username and passwords when prompted. Keep an eye on the terminal in case you are prompted again.
+
+If instead, you would like to perform the installation manually, the instructions are included below. Note that program installation must be performed manually, and there are a few optional configuration that are not included in the install script. You can find instructions for these at the bottom of this document.
+
+---
+
+(START CONTENTS OF INSTALL SCRIPT)
+
 ## Add Git APT Repository
 
 ```
@@ -22,20 +49,11 @@ sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
 When installing third party programs that are not available through the package manager, you'll need a local directory in which to install them. 
 
 ```
-sudo mkdir /opt/local
+sudo mkdir /opt/local && \
 sudo chown <your username> /opt/local
 ```
 
 Now when installing programs, you will extract them to `opt/local`.
-
-## Clone Linux Config repo
-
-Clone this repo into `~/linux-config`:
-
-```
-cd ~ && \
-git clone https://github.com/jvanbrug/linux-config
-```
 
 ## Source config files
 
@@ -67,38 +85,6 @@ cd /etc/vim && \
 sudo touch vimrc.local && \
 sudo chown <your-username> vimrc.local && \
 echo "source ~/linux-config/.vimrc" >> vimrc.local
-```
-
-## Optional Configuration
-
-### (Optional) Git Credential Caching
-
-If you would like your Git credentials to be saved so you don't have to user your username and password every time you interact with remotes, use the following command:
-
-```
-git config --global credential.helper "cache --timeout=604800"
-```
-
-The timeout value is expressed in seconds, so the above command will cache your credentials for one week at a time. 
-
-If you don't mind your login credentials store in human-readable text in a local file (`.git-credentials`), you can use this command instead:
-
-```
-git config credential.helper store
-```
-
-To unset your credential helper, use this:
-
-```
-git config --unset credential.helper
-```
-
-## (Optional) Set Vim as editor for Git commits
-
-If you would like to use Vim as your editor for Git commits, use the following command:
-
-```
-git config --global core.editor "vim"
 ```
 
 ## Install third-party Bash/Git/Vim libraries
@@ -141,13 +127,13 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ## Install Python 3.5.1
 
 ```
-cd ~
-wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
-tar xfz Python-3.5.1.tgz
-rm Python-3.5.1.tgz
-cd Python-3.5.1
-./configure
-make
+cd ~ && \
+wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz && \
+tar xfz Python-3.5.1.tgz && \
+rm Python-3.5.1.tgz && \
+cd Python-3.5.1 && \
+./configure && \
+make && \
 sudo make install
 ```
 
@@ -163,7 +149,13 @@ $ python3 --version
 Python 3.5.1
 ```
 
-## Install PyCharm
+(END CONTENTS OF INSTALL SCRIPT)
+
+---
+
+## Program Installation
+
+### Install PyCharm
 
 PyCharm is a Python IDE that we use for our development. To install PyCharm:
 1. Navigate to the download page [here](https://www.jetbrains.com/pycharm/download/#tabs_1=linux). Be sure to choose the appropriate operating system. 
@@ -171,16 +163,16 @@ PyCharm is a Python IDE that we use for our development. To install PyCharm:
 3. In a terminal, navigate to the directory containing the downloaded file. Run the following commands to install and run PyCharm:
 
 ```
-tar xfz pycharm*.tar.gz
-rm pycharm*.tar.gz
-mv pycharm* /opt/local/
-cd /opt/local/pycharm*/bin
+tar xfz pycharm*.tar.gz && \
+rm pycharm*.tar.gz && \
+mv pycharm* /opt/local/ && \
+cd /opt/local/pycharm*/bin && \
 ./pycharm.sh
 ```
 
 Follow the setup wizard and be sure to say "yes" when it asks about creating a launcher script. 
 
-## (Optional) Install Sublime Text 3
+### (Optional) Install Sublime Text 3
 
 If you would like a lightweight text editor, Sublime Text is a nice option. You can install it by running the following command:
 
@@ -190,4 +182,34 @@ sudo apt-get install sublime-text
 
 If you would like to enable Vim support, see this [link](https://www.sublimetext.com/docs/3/vintage.html). You will also find instructions for keymapping on that page. 
 
+## Optional Configuration
 
+### (Optional) Git Credential Caching
+
+If you would like your Git credentials to be saved so you don't have to user your username and password every time you interact with remotes, use the following command:
+
+```
+git config --global credential.helper "cache --timeout=604800"
+```
+
+The timeout value is expressed in seconds, so the above command will cache your credentials for one week at a time. 
+
+If you don't mind your login credentials store in human-readable text in a local file (`.git-credentials`), you can use this command instead:
+
+```
+git config credential.helper store
+```
+
+To unset your credential helper, use this:
+
+```
+git config --unset credential.helper
+```
+
+## (Optional) Set Vim as editor for Git commits
+
+If you would like to use Vim as your editor for Git commits, use the following command:
+
+```
+git config --global core.editor "vim"
+```
