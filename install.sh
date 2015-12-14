@@ -6,7 +6,6 @@ read -p "Enter Linux username: " username
 # Clone Linux Config repo
 cd ~
 git clone https://github.com/jvanbrug/linux-config
-cd linux-config
 
 # Add Git APT Repository
 sudo add-apt-repository ppa:git-core/ppa
@@ -15,7 +14,7 @@ sudo add-apt-repository ppa:git-core/ppa
 # Update local APT packages and install packages from the `requirements.apt` file:
 sudo apt-get update 
 sudo apt-get upgrade -y
-sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
+sudo apt-get -y install $(grep -vE "^/s*#" ~/linux-config/requirements.apt | tr "\n" " ")
 
 # Create Installation Directory for local programs
 # When installing third party programs that are not available through the package manager, you'll need a local directory in which to install them. 
