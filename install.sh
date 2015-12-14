@@ -3,6 +3,11 @@
 # Get username
 read -p "Enter Linux username: " username
 
+# Clone Linux Config repo
+cd ~
+git clone https://github.com/jvanbrug/linux-config
+cd linux-config
+
 # Add Git APT Repository
 sudo add-apt-repository ppa:git-core/ppa
 
@@ -17,10 +22,6 @@ sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
 sudo mkdir /opt/local
 sudo chown $username /opt/local
 # Now when installing programs, you will extract them to `opt/local`.
-
-# Clone Linux Config repo
-cd ~
-git clone https://github.com/jvanbrug/linux-config
 
 # Source config files
 # Bash
