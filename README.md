@@ -40,6 +40,7 @@ sudo add-apt-repository ppa:git-core/ppa
 Update local APT packages and install packages from the `requirements.apt` file:
 
 ```
+cd ~/linux-config && \
 sudo apt-get update && \
 sudo apt-get upgrade -y && \
 sudo apt-get -y install $(grep -vE "^/s*#" requirements.apt | tr "\n" " ")
