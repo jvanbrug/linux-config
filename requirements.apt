@@ -5,7 +5,7 @@ clang
 curl
 git
 libjpeg8
-legjpeg62-dev
+libjpeg62-dev
 libfreetype6
 libfreetype6-dev
 libpq-dev
