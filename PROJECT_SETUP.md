@@ -27,7 +27,7 @@ Activate the virtual environment for the project:
 source ~/virtualenvs/<project name>/bin/activate
 ```
 
-You should now see "(project name)" on your terminal prompt. You should activate your virtual environment each time you work on a project and you need to call Python directly. This ensures that you use the Python installation for the project rather than your system installation. 
+You should now see "(<project name>)" on your terminal prompt. You should activate your virtual environment each time you work on a project and you need to call Python directly. This ensures that you use the Python installation for the project rather than your system installation. 
 
 To confirm that the virtual environment is active and pointing at the appropriate Python executable, you can run this command:
 
