@@ -53,6 +53,8 @@ Create a local postgres database for the project by running:
 createdb <project name>
 ```
 
+We do this because the Django app will expect to find a database with a name matching the project.
+
 Migrate the database in order to apply existing database migrations (make sure you are in the virtual environment):
 
 ```
