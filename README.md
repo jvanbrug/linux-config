@@ -16,7 +16,7 @@ git clone https://github.com/jvanbrug/linux-config
 If you are running Linux and would like the installation process to be performed automatically, you can run `install.sh` located at the root of the `linux-config` repository:
 update
 ```
-cd ~ && \
+cd ~/linux-config/ && \
 chmod 755 install.sh && \
 ./install.sh
 ```
