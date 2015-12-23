@@ -1,11 +1,8 @@
 # Linux Config
+# This script assumes you have the linux-config repo cloned at ~/linux-config/
 
 # Get username
 read -p "Enter Linux username: " username
-
-# Clone Linux Config repo
-cd ~
-git clone https://github.com/jvanbrug/linux-config
 
 # Add Git APT Repository
 sudo add-apt-repository ppa:git-core/ppa
