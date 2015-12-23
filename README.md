@@ -206,7 +206,7 @@ PyCharm is a Python IDE that we use for our development. To install PyCharm:
 3. In a terminal, navigate to the directory containing the downloaded file. Run the following commands to install and run PyCharm:
 
 ```
-tar xfz pycharm*.tar.gz && \
+sudo tar xfz pycharm*.tar.gz && \
 rm pycharm*.tar.gz && \
 mv pycharm* /opt/local/ && \
 cd /opt/local/pycharm*/bin && \
