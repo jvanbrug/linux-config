@@ -27,7 +27,7 @@ sudo chown $username /opt/local
 # Source `.bash_profile` in `/etc/bash.bashrc`:
 cd /etc
 sudo chown $username bash.bashrc
-echo "source ~/linux-config/.bash_profile" >> bash.bashrc
+echo "\nsource ~/linux-config/.bash_profile" >> bash.bashrc
 
 # Git
 # Source `.gitconfig` in `~/.gitconfig`:
