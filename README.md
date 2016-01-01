@@ -241,6 +241,16 @@ If you would like to enable Vim support, see this [link](https://www.sublimetext
 
 ## Optional Configuration
 
+### (Optional, Recommended) Setup SSH keys for GitHub/Bitbucket authentication
+
+*Note: if you would rather use credential caching (not recommended), skip this and see next section*
+
+Using SSH keys will allow you to generate a public/private key pair used for authentication such that you never have to enter you credentials again. 
+
+For configuring SSH keys see these [instructions](). Step 4 will add the key to your GitHub account. For a Bitbucket account, add the key to your account by following Step 4 (Mac/Linux) or Step 5 (Windows) of these [instructions](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html).
+
+Note that you can use the same key for both accounts without issue. 
+
 ### (Optional) Git Credential Caching
 
 If you would like your Git credentials to be saved so you don't have to user your username and password every time you interact with remotes, use the following command:
@@ -262,6 +272,7 @@ To unset your credential helper, use this:
 ```
 git config --unset credential.helper
 ```
+
 
 ### (Optional) Set Vim as editor for Git commits
 
