@@ -1,3 +1,4 @@
+# Git aliases
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -38,6 +39,9 @@ alias gsh='git stash'
 alias gsha='git stash apply'
 alias gshl='git stash list'
 alias gshp='git stash -p'
+
+# Docker aliases
+alias di='docker images'
 
 source ~/linux-config/libs/bash-git-prompt/gitprompt.sh
 Time12ampm="\$(date +%I:%M)"
