@@ -1,3 +1,6 @@
+# Linux aliases
+alias alf='ls -alF'
+
 # Git aliases
 alias g='git'
 alias ga='git add'
