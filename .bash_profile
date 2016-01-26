@@ -44,7 +44,7 @@ alias gshl='git stash list'
 alias gshp='git stash -p'
 
 # Docker aliases
-alias di='docker images'
+alias di='sudo docker images'
 
 source ~/linux-config/libs/bash-git-prompt/gitprompt.sh
 Time12ampm="\$(date +%I:%M)"
