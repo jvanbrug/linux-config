@@ -44,6 +44,7 @@ alias gshl='git stash list'
 alias gshp='git stash -p'
 
 # Docker aliases
+alias docker='sudo docker'
 alias di='sudo docker images'
 
 source ~/linux-config/libs/bash-git-prompt/gitprompt.sh
