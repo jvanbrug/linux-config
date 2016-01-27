@@ -126,6 +126,15 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
+### Vim Markdown
+
+Install Vim Markdown using Pathogen:
+
+```
+cd ~/.vim/bundle && \
+git clone https://github.com/plasticboy/vim-markdown.git
+```
+
 ## Install Python 3.5.1
 
 ```

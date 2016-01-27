@@ -53,6 +53,10 @@ source ~/linux-config/.bash_profile
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+# Install Vim Markdown Highlighting
+cd ~/.vim/bundle
+git clone https://github.com/plasticboy/vim-markdown.git
+
 # Install Python 3.5.1
 cd ~
 wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz

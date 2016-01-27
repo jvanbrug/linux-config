@@ -18,3 +18,5 @@ set number
 set ruler
 
 imap jj <Esc>
+
+let g:vim_markdown_folding_style_pythonic = 1
