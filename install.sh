@@ -21,22 +21,22 @@ sudo chown $username /opt/local
 
 # Source config files
 # Bash
-# Source `.bash_profile` in `/etc/bash.bashrc`:
+# Source `bash_profile` in `/etc/bash.bashrc`:
 cd /etc
 sudo chown $username bash.bashrc
-echo "\nsource ~/linux-config/.bash_profile" >> bash.bashrc
+echo "\nsource ~/linux-config/bash_profile" >> bash.bashrc
 
 # Git
-# Source `.gitconfig` in `~/.gitconfig`:
+# Source `gitconfig` in `~/.gitconfig`:
 cd ~
-echo -e "[include]\n\tpath = ~/linux-config/.gitconfig" >> .gitconfig
+echo -e "[include]\n\tpath = ~/linux-config/gitconfig" >> .gitconfig
 
 # Vim
-# Create `/etc/vim/vimrc.local` and source `.vimrc`:
+# Create `/etc/vim/vimrc.local` and source `vimrc`:
 cd /etc/vim
 sudo touch vimrc.local && \
 sudo chown $username vimrc.local
-echo "source ~/linux-config/.vimrc" >> vimrc.local
+echo "source ~/linux-config/vimrc" >> vimrc.local
 
 # Install third-party Bash/Git/Vim libraries
 # Make a `libs/` directory:
@@ -47,7 +47,7 @@ mkdir libs
 # Clone `bash-git-prompt` into `libs/`:
 cd ~/linux-config/libs
 git clone https://github.com/magicmonty/bash-git-prompt.git
-source ~/linux-config/.bash_profile
+source ~/linux-config/bash_profile
 
 # Install Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
